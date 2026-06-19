@@ -1,9 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Slop Detector</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <h1>Backend is Running 🚀</h1>
+
+    <div class="container">
+
+        <h1>AI Slop Detector</h1>
+
+        <p class="subtitle">
+            Analyze text and estimate whether it is AI-generated.
+        </p>
+
+        <textarea
+            id="textInput"
+            placeholder="Paste your text here..."></textarea>
+
+        <p id="counter">0 characters</p>
+
+        <button onclick="analyzeText()">
+            Analyze Text
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+    
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+    
+
 </body>
+
 </html>
