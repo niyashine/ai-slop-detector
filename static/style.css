@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 15px;
+}
+
+#counter {
+    text-align: right;
+    color: #666;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fd4;
+}
+
+#result {
+    margin-top: 25px;
+}
+
+.result-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eef6ff;
+}
+
+.result-card h2 {
+    margin-top: 0;
+}
+
+.result-card ul {
+    padding-left: 20px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.ai {
+    color: red;
+}
+
+.human {
+    color: green;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    textarea {
+        height: 180px;
+    }
+
+}
