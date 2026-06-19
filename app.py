@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from model.model_loader import predict
+from model.model_loader import predict, load_model
 
 app = Flask(__name__)
 CORS(app)
+
+load_model()
 
 
 @app.route("/")
