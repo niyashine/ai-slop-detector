@@ -15,12 +15,26 @@ def home():
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    data = request.get_json()
-    text = data.get("text", "")
+    try:
+        data = request.get_json()
+        text = data.get("text", "")
 
-    result = predict(text)
+        if not text or len(text.split()) < 10:
+            return jsonify({
+                "prediction": "Too short",
+                "confidence": 0,
+                "reasons": ["Please enter at least 10–15 words for reliable prediction"]
+            })
 
-    return jsonify(result)
+        result = predict(text)
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({
+            "prediction": "Error",
+            "confidence": 0,
+            "reasons": [str(e)]
+        })
 
 
 if __name__ == "__main__":
